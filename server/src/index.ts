@@ -1,9 +1,17 @@
-import { runMemoryAgent } from "./agents";
+import { runAiSupportAgent, runMemoryAgent } from "./agents";
 import logger from "./logger";
 
 const main = async (query: string) => {
     const chunks = await runMemoryAgent(query)
-    logger.info(`Memory chunk: ${chunks}`)
+
+    const completion = await runAiSupportAgent({
+        chunks,
+        query,
+    })
+
+    logger.info(`Query: ${query}`)
+
+    logger.info(`Response: ${completion}`)
 }
 
 main("What is the maximum carry-on weight?")
