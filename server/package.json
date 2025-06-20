@@ -14,9 +14,11 @@
     "express": "^5.1.0",
     "langbase": "^1.1.62",
     "nodemon": "^3.1.10",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "uuid": "^11.1.0"
   },
   "devDependencies": {
+    "@types/express": "^5.0.3",
     "@types/node": "^22.15.30"
   }
 }
